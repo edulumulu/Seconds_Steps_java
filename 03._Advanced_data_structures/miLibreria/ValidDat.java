@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package miLibreria;
 
 import java.util.InputMismatchException;
@@ -9,7 +5,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author eduardolucasmunozdelucas
+ * @author edulumulu
  */
 public class ValidDat {
 
@@ -23,6 +19,7 @@ public class ValidDat {
      * restricción.
      */
     public static int enteroEntreDosValores(int a, int b) {
+        
         Scanner sc = new Scanner(System.in);
         boolean ok = true;
         int num = -1;
@@ -54,7 +51,6 @@ public class ValidDat {
         Scanner sc = new Scanner(System.in);
         String texto = null;
         do {
-//            System.out.println("Escribe un texto:");
             texto = sc.nextLine();
         } while (palabraVacia(texto));
 
@@ -68,15 +64,20 @@ public class ValidDat {
      * @param t ---> String
      * @return ---> true o false
      */
-    public static boolean palabraVacia(String t) {
+    public static boolean palabraVacia(String t){
         boolean si = t.length() == 0;
         if (si) {
             System.out.println("Tienes que escribir algo, intentalo de nuevo:");
+            
 
         }
         return si;
     }
 
+    /**
+     * Pide un numero decimal que ha de ser mayor o igual que 0.
+     * @return  --> Double
+     */
     public static double pedirNumeroDecimal() {
         Scanner sc = new Scanner(System.in);
         boolean ok = true;
@@ -92,13 +93,18 @@ public class ValidDat {
                 }
                 
             } catch (InputMismatchException e) {
-                System.out.println("El valor introduciod debe ser decimal. Vuelve a intentarlo.");
+                System.out.println("El parámetro introduciod es incorrecto, debe ser un número decimal. Vuelve a intentarlo.");
+                sc.next();
             }
 
         } while (ok);
         return num;
     }
     
+    /**
+     * Pide un numero entero que ha de ser mayor o igual que 0.
+     * @return 
+     */
     public static int pedirNumeroEntero() {
         Scanner sc = new Scanner(System.in);
         boolean ok = true;
@@ -110,11 +116,14 @@ public class ValidDat {
                 if(num>=0){
                     ok= false;
                 }else{
+                    sc.next();
                     System.out.println("El valor debe de ser positivo. Vuelve a intentarlo");
+                    
                 }
                 
             } catch (InputMismatchException e) {
                 System.out.println("El valor introduciod debe ser un número entero. Vuelve a intentarlo.");
+                sc.next();
             }
 
         } while (ok);
