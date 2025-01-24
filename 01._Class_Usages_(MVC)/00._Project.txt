@@ -1,0 +1,9 @@
+Iniciación a la programación con objetos
+
+Este proyecto consiste en crear un sistema simple de gestión de un gimnasio.
+
+Existe una clase denominada Cliente que albergará los atributos de un cliente y una clase Entrenador con los propios. Cada clase tendrá sus propios constructores y sus getters y setters. 
+
+El patron seguido es el Modelo Vista Controlador por lo que existe una clase denominada Gimnasio que tiene de variables arrays de las clases anteriores para llevar a cabo la gestión de agregar entrenadores y clientes al gimnasio y también clientes a los entrenadores.
+
+Los datos introducidos tienen control de formato en varios casos
