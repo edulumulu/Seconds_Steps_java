@@ -1,0 +1,5 @@
+implementar un programa en Java que permite gestionar una lista de productos utilizando las clases ArrayList y HashMap.
+
+Sobreescritura de los métodos equals() y hashCode().
+
+Programa que permite, agregar, actualizar o eliminar un producto de un listado concreto.
