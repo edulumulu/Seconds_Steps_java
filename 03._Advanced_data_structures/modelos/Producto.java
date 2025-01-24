@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package modelos;
 
 import java.util.ArrayList;
@@ -9,7 +6,7 @@ import java.util.Objects;
 
 /**
  *
- * @author eduardolucasmunozdelucas
+ * @author edulumulu
  */
 public class Producto {
     
@@ -18,15 +15,22 @@ public class Producto {
      private double precio;
      private int cantidad ;
 
-//     public String materialesToString(){
-//         String texto;
-//         for(String m : materiales)
-//             System.out.println(m);
-//        
-//    }
+     public Producto(String nombre) {
+        this.nombre = nombre;
+    }
+    public Producto(String nombre, double precio, int cantidad) {
+        this.nombre = nombre;
+        
+    }
      
-   
-
+    public Producto(String nombre, ArrayList<String> materiales, double precio, int cantidad) {
+        this.nombre = nombre;
+        this.materiales = materiales;
+        this.precio = precio;
+        this.cantidad = cantidad;
+    }
+    
+     //Métodos sobreescritos 
     @Override
     public int hashCode() {
         int hash = 3;
@@ -56,28 +60,9 @@ public class Producto {
        
     }
 
-    public Producto(String nombre) {
-        this.nombre = nombre;
-    }
-    
-    
-     
-     
+    //Getters y setters
     public String getNombre() {
         return nombre;
-    }
-    
-     public Producto(String nombre, double precio, int cantidad) {
-        this.nombre = nombre;
-        
-    }
-     
-
-    public Producto(String nombre, ArrayList<String> materiales, double precio, int cantidad) {
-        this.nombre = nombre;
-        this.materiales = materiales;
-        this.precio = precio;
-        this.cantidad = cantidad;
     }
 
     public void setNombre(String nombre) {
