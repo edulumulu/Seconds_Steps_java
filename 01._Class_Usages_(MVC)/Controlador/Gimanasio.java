@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Controlador;
 
 import static MiLibreria.DatosArrays.estaLleno;
@@ -25,8 +21,7 @@ import static Modelos.Entrenador.contatdorEntrenadores;
 
 /**
  *
- * @author eduardolucasmunozdelucas
- */
+ * @author edulumulu
 public class Gimanasio {
 
     public static Cliente[] clientes = new Cliente[100];
@@ -240,6 +235,7 @@ public class Gimanasio {
                                 break;
 
                             } else {
+                                System.out.println("El dni introducido no está en la base de datos.");
                                 i++;
                             }
                         }
